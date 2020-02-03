@@ -1,0 +1,17 @@
+[
+  {
+    "op": "replace",
+    "path": "#TUFIN_DNSMASQ_PORTS_XPATH#",
+    "value": 54
+  },
+  {
+    "op": "replace",
+    "path": "#TUFIN_KUBEDNS_ARGS_XPATH#",
+    "value": #TUFIN_KUBEDNS_SIDECAR_ARGS#
+  },
+  {
+    "op": "replace",
+    "path": "#TUFIN_DNSMASQ_ARGS_XPATH#",
+    "value": #TUFIN_DNSMASQ_NANNY_ARGS#
+  }
+]

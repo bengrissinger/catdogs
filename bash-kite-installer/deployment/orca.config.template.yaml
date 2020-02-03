@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: orca-config
+  namespace: #TUFIN_KITE_NAMESPACE#
+data:
+  kite-domain: "#KITE_DOMAIN#"
+  kite-project: "#KITE_PROJECT#"
+  kite-install-istio: "#TUFIN_INSTALL_ISTIO#"
+  kite-install-dns: "#TUFIN_INSTALL_DNS#"
+  kite-install-pusher: "#TUFIN_INSTALL_PUSHER#"
+  kite-install-watcher: "#TUFIN_INSTALL_WATCHER#"
+  kite-install-monitor: "#TUFIN_INSTALL_MONITOR#"
+  kite-install-syslog: "#TUFIN_INSTALL_SYSLOG#"
+  orca-url: "#TUFIN_ORCA_URL#"
+  guru-url: "#TUFIN_GURU_URL#"
+  registry-url: "#TUFIN_REGISTRY_URL#"
+  kube-platform: "#KUBE_PLATFORM#"
+  kube-network-policy: "#TUFIN_KUBE_NETWORK_POLICY#"

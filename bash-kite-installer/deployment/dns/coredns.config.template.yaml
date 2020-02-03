@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tufindns
+  namespace: kube-system
+data:
+  Corefile: |
+    internal:#TUFIN_COREDNS_PORT# {
+        forward . 0.0.0.0:#TUFIN_KUBEDNS_PORT#
+    }
+    .:#TUFIN_COREDNS_PORT# {
+        health :8091
+        whitelist cluster.local {
+          pods verified
+        }
+        proxy . 0.0.0.0:#TUFIN_KUBEDNS_PORT#
+    }
+  grpc-discovery-url: kite.#TUFIN_KITE_NAMESPACE#:81
+  guru-url: #TUFIN_GURU_URL#
