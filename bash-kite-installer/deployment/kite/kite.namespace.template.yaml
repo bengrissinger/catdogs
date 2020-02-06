@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: #TUFIN_KITE_NAMESPACE#
-  labels:
-    name: #TUFIN_KITE_NAMESPACE#
