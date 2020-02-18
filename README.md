@@ -10,5 +10,18 @@ To deploy
     
     kubectl config use-context my-cluster-name
     
-4) Use kubectl to deploy the stack using yaml
+4) Create votes namespace
+
+    kubectl create ns votes
+    
+5) Use kubectl to deploy the stack using kube-deployment.yaml
+
+    kubectl create -f kube-deployment.yaml -n votes
+    
+Have fun voting !!!
+
+
+To tear down deployment 
+
+    kubectl delete -f kube-deployment.yaml -n votes
 
